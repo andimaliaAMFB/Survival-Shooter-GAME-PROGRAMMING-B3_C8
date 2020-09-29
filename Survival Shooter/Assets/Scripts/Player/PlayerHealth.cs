@@ -34,7 +34,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
-        //jika terkea damage
+        //jika terkena damage
         if (damaged)
         {
             damageImage.color = flashColour;
@@ -68,6 +68,13 @@ public class PlayerHealth : MonoBehaviour
         {
             Death();
         }
+    }
+
+    public void GetCure (int amount)
+    {
+        currentHealth += amount;
+
+        healthSlider.value = currentHealth;
     }
 
     void Death()
